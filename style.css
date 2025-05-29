@@ -49,6 +49,7 @@ h1, h2, h3 {
   color: #110E15 !important;
 }
 
+
 /* Hero Section */
 #hero {
   min-height: 100vh;
@@ -90,9 +91,12 @@ h1, h2, h3 {
 @media (max-width: 767px) {
   .hero-photo {
     width: 60%;
+    margin-top: 7rem;
     margin-bottom: 2rem;
   }
 }
+
+
 .hero-text {
   margin-left: 2rem;
   flex: 1;
@@ -193,6 +197,14 @@ h1, h2, h3 {
   background-color: #D95268;
   border-color: #D95268;
   color: #fff;
+}
+@media (max-width: 768px){
+  .switch-buttons .btn-primary{
+    padding: 10px 12px !important;
+  }
+  .switch-buttons{
+    gap: 0.15rem;
+  }
 }
 
 /* Toggle Content sections */
