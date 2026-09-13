@@ -1,83 +1,137 @@
-// Include emailjs.init with your user (public) ID (replace below)
+// EmailJS
 emailjs.init('kVGma4HsmAdY25sd7');
 
-// Scroll down arrow: scrolls to About section
-document.getElementById('scroll-down').addEventListener('click', () => {
-  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-});
-
-// Toggle visibility of Education, Tech Stack, Certifications sections
-function showSection(sectionId) {
-  const sections = ['education', 'tech-stack', 'certifications'];
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    el.style.display = (id === sectionId) ? 'block' : 'none';
+// Smooth scroll for the hero arrow.
+const scrollDown = document.getElementById('scroll-down');
+if (scrollDown) {
+  scrollDown.addEventListener('click', () => {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   });
 }
 
-// Initialize showing Education by default on page load and manage animations
-window.addEventListener('load', () => {
-  showSection('education');
-  handleFadeInScroll();
-});
-
-// Fade in animation when elements come into viewport
+// Reveal sections as they enter the viewport.
 function handleFadeInScroll() {
   const fadeEls = document.querySelectorAll('.fade-in-section');
-  const windowBottom = window.innerHeight + window.scrollY;
-  fadeEls.forEach(el => {
-    if (windowBottom > el.offsetTop + 100) {
-      el.classList.add('visible');
+  const triggerPoint = window.innerHeight + window.scrollY - 100;
+
+  fadeEls.forEach((element) => {
+    if (triggerPoint > element.offsetTop) {
+      element.classList.add('visible');
     }
   });
 }
-window.addEventListener('scroll', handleFadeInScroll);
 
-// Contact form submission handling with EmailJS
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-  event.preventDefault();
+// Highlight the navigation item for the section currently in view.
+function updateActiveNav() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navbar .nav-link');
+  const scrollPosition = window.scrollY + 140;
 
-  const alertBox = document.getElementById('formAlert');
-  alertBox.textContent = '';
-  alertBox.style.color = '';
+  let currentSection = 'hero';
 
-  const name = this.name.value.trim();
-  const email = this.email.value.trim();
-  const message = this.message.value.trim();
+  sections.forEach((section) => {
+    if (scrollPosition >= section.offsetTop) {
+      currentSection = section.id;
+    }
+  });
 
-  if (!name || !email || !message) {
-    alertBox.style.color = '#cf6679'; // red-like error color
-    alertBox.textContent = 'Please fill in all fields.';
-    return;
-  }
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alertBox.style.color = '#cf6679';
-    alertBox.textContent = 'Please enter a valid email address.';
-    return;
-  }
+  navLinks.forEach((link) => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
+  });
+}
 
-  alertBox.style.color = '#bb86fc'; // purple info
-  alertBox.textContent = 'Sending message...';
-
-  // Prepare parameters for your EmailJS template
-  const templateParams = {
-    from_name: name,
-    from_email: email,
-    message: message,
-  };
-
-   emailjs.send('service_ediljie', 'template_k6d6aho', templateParams)
-    .then(() => {
-      alertBox.style.color = '#03dac5'; // teal success
-      alertBox.textContent = 'Thank you! Your message has been sent.';
-      this.reset();
-    }).catch(error => {
-      alertBox.style.color = '#cf6679';
-      alertBox.textContent = 'Failed to send message. Please try again later.';
-      console.error('EmailJS error:', error);
-    });
+window.addEventListener('load', () => {
+  handleFadeInScroll();
+  updateActiveNav();
 });
 
+window.addEventListener('scroll', () => {
+  handleFadeInScroll();
+  updateActiveNav();
+});
 
-//service_ediljie, template_k6d6aho, kVGma4HsmAdY25sd7
+// Close the mobile navigation after selecting a section.
+document.querySelectorAll('.navbar .nav-link').forEach((link) => {
+  link.addEventListener('click', () => {
+    const navbar = document.getElementById('navbarNav');
+    if (navbar?.classList.contains('show')) {
+      bootstrap.Collapse.getOrCreateInstance(navbar).hide();
+    }
+  });
+});
+
+// Contact form submission through EmailJS.
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const alertBox = document.getElementById('formAlert');
+    alertBox.textContent = '';
+    alertBox.style.color = '';
+
+    const name = this.name.value.trim();
+    const email = this.email.value.trim();
+    const message = this.message.value.trim();
+
+    if (!name || !email || !message) {
+      alertBox.style.color = '#cf6679';
+      alertBox.textContent = 'Please fill in all fields.';
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      alertBox.style.color = '#cf6679';
+      alertBox.textContent = 'Please enter a valid email address.';
+      return;
+    }
+
+    alertBox.style.color = '#bb86fc';
+    alertBox.textContent = 'Sending message...';
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message
+    };
+
+    emailjs.send('service_ediljie', 'template_k6d6aho', templateParams)
+      .then(() => {
+        alertBox.style.color = '#03dac5';
+        alertBox.textContent = 'Thank you! Your message has been sent.';
+        this.reset();
+      })
+      .catch((error) => {
+        alertBox.style.color = '#cf6679';
+        alertBox.textContent = 'Failed to send message. Please try again later.';
+        console.error('EmailJS error:', error);
+      });
+  });
+}
+
+
+// Light / dark mode toggle. Dark mode preserves the original portfolio appearance.
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+document.documentElement.setAttribute('data-theme', savedTheme);
+
+function updateThemeToggle() {
+  if (!themeToggle) return;
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+  themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+  themeToggle.setAttribute('title', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+}
+
+updateThemeToggle();
+
+themeToggle?.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('portfolio-theme', next);
+  updateThemeToggle();
+});

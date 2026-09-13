@@ -3,243 +3,478 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Steffy Roesy — Technical Author, documentation engineer, and Computer Science graduate." />
   <title>Steffy Roesy's Portfolio</title>
-  <!-- Bootstrap CSS CDN -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- FontAwesome CDN for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-  <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet" />
-  <!-- Custom CSS -->
   <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top shadow-sm navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#hero">Steffy Roesy</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
           <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact </a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-2">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+              <i class="fas fa-sun"></i>
+            </button>
+          </li>
           <li class="nav-item ms-3">
-            <a class="btn btn-outline-light btn-sm" href="assets/SteffyRoesyJA_Resume (8).pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-
+            <a class="btn btn-outline-light btn-sm"
+              href="assets/Steffy_Roesy_J_A_Resume_2026 (1).pdf"
+              target="_blank" rel="noopener noreferrer">Resume</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center text-center">
     <div class="hero-content d-flex flex-column flex-md-row align-items-center">
       <img src="assets/steffy_whiteshirt.jpeg" alt="Steffy Roesy" class="hero-photo shadow-lg" />
+
       <div class="hero-text">
         <h1>Hello, I'm <span class="hero-name">Steffy Roesy</span></h1>
-        <p class="hero-title">Software Developer | Technology Enthusiast</p>
+        <p class="hero-title">Technical Author | Developer Documentation | Docs Engineering</p>
+        <p class="hero-intro">
+          I turn complex technology into clear, useful documentation — while building better
+          documentation experiences with web technologies, analytics, automation, and AI.
+        </p>
+
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/steffyroesyja/" target="_blank" class="text-light me-3"><i class="fab fa-linkedin fa-2x"></i></a>
-          <a href="https://github.com/stacy4602" target="_blank" class="text-light"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://www.linkedin.com/in/steffyroesyja/" target="_blank" rel="noopener noreferrer"
+             class="text-light me-3" aria-label="LinkedIn">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://github.com/stacy4602" target="_blank" rel="noopener noreferrer"
+             class="text-light" aria-label="GitHub">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
         </div>
       </div>
-    </div>    
-    <a href="#projects" class="btn btn-light btn-lg shadow-lg mt-3">View My Work</a>
-    <div id="scroll-down" title="Scroll down" class="mt-4"><i class="fas fa-angle-down fa-2x"></i></div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#experience" class="btn btn-outline-light btn-lg mt-3">My Experience</a>
+      <a href="#work" class="btn btn-outline-light btn-lg mt-3">View My Work</a>
+    </div>
+
+    <div id="scroll-down" title="Scroll down" class="mt-4">
+      <i class="fas fa-angle-down fa-2x"></i>
+    </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="fade-in-section">
     <div class="container">
       <h2 class="section-title">About Me</h2>
+
       <div class="about-content d-flex flex-column flex-md-row align-items-center gap-4">
         <p class="about-text">
-          Results-oriented Computer Science Engineer with a strong academic foundation, ranked 18th at Anna University with a CGPA of 9.32/10. 
-          Proficient in Java, Python, and SQL, with demonstrated strengths in problem-solving, leadership, and collaboration. 
-          Quick to learn and highly adaptable to dynamic environments, with a proven ability to communicate effectively and contribute meaningfully to organizational goals.
+          I'm a Technical Author with a Computer Science background and a passion for making
+          complex technology easier to understand. My work sits at the intersection of
+          technical writing, documentation engineering, and web development.
+          <br><br>
+          I enjoy not only explaining how products work, but also improving the systems,
+          workflows, and experiences that help people discover and use that information.
+          I'm especially interested in documentation quality, analytics, automation, and
+          practical applications of AI in documentation workflows.
+          <br><br>
         </p>
       </div>
-      <div class="switch-buttons mt-4 text-center">
-        <button class="btn btn-primary me-2" onclick="showSection('education')">Education</button>
-        <button class="btn btn-primary me-2" onclick="showSection('tech-stack')">Experience</button>
-        <button class="btn btn-primary" onclick="showSection('certifications')">Certifications</button>
-      </div>
-      <div class="toggle-sections">
-        <div id="education" class="toggle-section" style="display:none;">
-          <h3 class="h3 mt-4 text-center">Education</h3>
-          <p>
-            <p><i class="fa-solid fa-user-graduate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>B.E - Computer Science and Engineering</b> - CARE College of Engineering, Trichy</p>
-            <p style="text-align: center;">Aug 2019 - Jul 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentage - <b>93.2%</b></p>
-            <p><i class="fa-solid fa-user-graduate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>HSC(XII grade)</b> - St.John's Vestry Anglo Indian Hr Sec School, Trichy&nbsp;&nbsp; -&nbsp;&nbsp;<b>80.5%</b></p>
-            <p><i class="fa-solid fa-user-graduate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>SSC(X grade)</b> - St.John's Vestry Anglo Indian Hr Sec School, Trichy&nbsp;&nbsp;-&nbsp;&nbsp;<b>98.4%</b></p>
-          </p>
-        </div>
-        <div id="tech-stack" class="toggle-section" style="display:none;">
-          <h3 class="h3 mt-4 text-center">Experience</h3>
-          <p><i class="fa-solid fa-briefcase project-icon"></i>&nbsp;&nbsp;&nbsp;<b>Internship</b> - National Small Scale Industries(NSIC), Chennai - July 2022(1 week)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Industrial Embedded with AI & IOT</p>
-        </div>
-        <div id="certifications" class="toggle-section" style="display:none;">
-          <h3 class="h3 mt-4 text-center">Certifications</h3>
-          <p><i class="fa-solid fa-certificate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>Java Programming</b> - Great Learning</p>
-          <p><i class="fa-solid fa-certificate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>Project on University Admit Eligibility Predictor</b> - IBM ICT Academy</p>
-          <p><i class="fa-solid fa-certificate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>Data Science Methodology</b> - IBM Coursera</p>
-          <p><i class="fa-solid fa-certificate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>HTML, CSS, JavaScript for Web Developers</b> - John Hopkins University Coursera</p>
-          <p><i class="fa-solid fa-certificate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>Data Analysis using MS Excel</b> - Coursera project Network</p>
-          <p><i class="fa-solid fa-certificate project-icon"></i>&nbsp;&nbsp;&nbsp;<b>Build a free website with WordPress</b> - Coursera Project Network</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="fade-in-section">
+
+
+  <!-- Experience -->
+  <section id="experience" class="fade-in-section">
     <div class="container">
-      <h2 class="section-title">Skillset</h2>
-      <p class="project-text">My go-to technologies and personal strengths for building impactful solutions.</p>
-      <div class="skills-container d-flex flex-column flex-md-row gap-4 justify-content-center">
-        <div class="skill-box p-3 rounded shadow-sm">
-          <h4 class="skill-category">Technical Expertise</h4>
-          <ul class="skill-list-icon">
-            <li><i class="fab fa-java"></i> Java</li>
-            <li><i class="fab fa-python"></i> Python</li>
-            <li><i class="fa-solid fa-code"></i></i> Django</li>
-            <li><i class="fa-solid fa-code"></i> Flask</li>
-            <li><i class="fab fa-react"></i> React</li>
-            <li><i class="fab fa-js-square"></i> JavaScript</li>
-            <li><i class="fab fa-html5"></i> HTML</li>
-            <li><i class="fab fa-css3-alt"></i> CSS</li>
-            <li><i class="fas fa-database"></i> MySQL</li>
-            <li><i class="fas fa-database"></i> Postgres</li>
-          </ul>
-        </div>
-        <div class="skill-box p-3 rounded shadow-sm">
-          <h4 class="skill-category">Development & Workflow Tools</h4>
-          <ul class="skill-list-icon">
-            <li><i class="fab fa-github"></i> GitHub</li>
-            <li><i class="fas fa-code"></i> VSCode</li>
-            <li><i class="fas fa-tasks"></i> Jira</li>
-            <li><i class="fa-brands fa-aws"></i> AWS</li>
-            <li><i class="fas fa-paper-plane"></i> Postman</li>
-            <li><i class="fab fa-wordpress"></i> WordPress</li>
-            <li><i class="fa-brands fa-microsoft"></i> MS Teams</li>
-            <li><i class="fas fa-project-diagram"></i> Agile SDLC</li>
-          </ul>
-        </div>
-        <div class="skill-box p-3 rounded shadow-sm">
-          <h4 class="skill-category">Security & Systems Knowledge</h4>
-          <ul class="skill-list-icon">
-            <li><i class="fas fa-shield-alt"></i> Vulnerability Assessment</li>
-            <li><i class="fas fa-lock"></i> Pen Testing</li>
-            <li><i class="fas fa-search"></i> Code Reviews</li>
-            <li><i class="fas fa-bug"></i> OWASP ZAP</li>
-            <li><i class="fab fa-linux"></i> Linux</li>
-            <li><i class="fa-brands fa-git-alt"></i> Git</li>
+      <h2 class="section-title">Experience</h2>
+      <p class="project-text">Professional experience at the intersection of technology, documentation, and user experience.</p>
 
-          </ul>
+      <div class="experience-card shadow-sm">
+        <div class="experience-header">
+          <div>
+            <h3 class="project-title">
+              <i class="fas fa-briefcase project-icon"></i>
+              Technical Author
+            </h3>
+            <p class="experience-company">Matillion</p>
+          </div>
+          <span class="experience-date">Jul 2025 – Present</span>
         </div>
-      </div>      
-    </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="fade-in-section">
-    <div class="container">
-      <h2 class="section-title">Work in Action</h2>
-      <p class="project-text">Real-world applications, predictive models, and interactive tools—built using code and curiosity.
-      </p>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card shadow-sm">
-            <img src="assets/farm.jpg" alt="Farming Assistance System" class="project-img rounded" />
-            <div class="project-content p-3">
-              <h3 class="project-title"><i class="fas fa-seedling project-icon"></i> Farming Assistance System</h3>
-              <p class="project-description">
-              A smart web app that uses XGBoost and ResNet models to recommend crops, fertilizers, and diagnose plant diseases using Python, Flask, and Machine Learning.              </p>
-              <div class="project-links d-flex gap-2">
-                <a href="https://github.com/stacy4602/Farming_Assistant" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
-              </div>
+        <p class="experience-summary">
+          Create and improve customer-facing and developer documentation for Maia Foundation, an agentic AI data engineering platform,
+          while contributing to the documentation site, its UI/UX, analytics, and automation.
+        </p>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="experience-point">
+              <i class="fas fa-pen-nib"></i>
+              <span>Write and maintain clear, task-focused product documentation.</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="experience-point">
+              <i class="fas fa-code"></i>
+              <span>Contribute to the Maia documentation website using HTML, CSS, JavaScript, Markdown, and Git/GitHub.</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="experience-point">
+              <i class="fas fa-chart-line"></i>
+              <span>Use GA4 and PostHog to analyze documentation usage and feedback and identify usability and discoverability improvements.</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="experience-point">
+              <i class="fas fa-robot"></i>
+              <span>Develop AI-assisted automation workflows for documentation review, feedback analysis, content operations, and repetitive processes.</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="experience-point">
+              <i class="fas fa-users"></i>
+              <span>Collaborate across product, engineering, and documentation workflows.</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="experience-point">
+              <i class="fas fa-sitemap"></i>
+              <span>Work across documentation structure, navigation, usability, and site experience.</span>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+<section id="skills" class="fade-in-section">
+  <div class="container">
+    <h2 class="section-title">Skillset</h2>
+    <p class="project-text">A blend of documentation, web, analytics, automation, and technical skills.</p>
+
+    <div class="skills-container">
+
+      <!-- Documentation -->
+      <div class="skill-box">
+        <h4 class="skill-category">Documentation</h4>
+        <ul class="skill-list-icon">
+          <li><i class="fas fa-pen-nib"></i> Technical Writing</li>
+          <li><i class="fas fa-book-open"></i> Developer Documentation</li>
+          <li><i class="fas fa-plug"></i> API Documentation</li>
+          <li><i class="fab fa-markdown"></i> Markdown</li>
+          <li><i class="fas fa-sitemap"></i> Information Architecture</li>
+          <li><i class="fas fa-palette"></i> Content Design & Editing</li>
+        </ul>
+      </div>
+
+      <!-- Web & Docs Engineering -->
+      <div class="skill-box">
+        <h4 class="skill-category">Web & Docs Engineering</h4>
+        <ul class="skill-list-icon">
+          <li><i class="fab fa-html5"></i> HTML5 & CSS3</li>
+          <li><i class="fab fa-js"></i> JavaScript & DOM</li>
+          <li><i class="fas fa-display"></i> Responsive Web Design & Web UI</li>
+          <li><i class="fab fa-react"></i> React.js</li>
+          <li><i class="fab fa-github"></i> Git & GitHub</li>
+          <li><i class="fas fa-diagram-project"></i> Mermaid</li>
+        </ul>
+      </div>
+
+      <!-- Analytics & Insights -->
+      <div class="skill-box">
+        <h4 class="skill-category">Analytics & Insights</h4>
+        <ul class="skill-list-icon">
+          <li><i class="fas fa-chart-line"></i> GA4 & PostHog</li>
+          <li><i class="fas fa-chart-bar"></i> Looker Studio</li>
+          <li><i class="fas fa-chart-simple"></i> Documentation Analytics</li>
+          <li><i class="fas fa-comments"></i> Feedback Analysis</li>
+        </ul>
+      </div>
+
+      <!-- AI & Automation -->
+      <div class="skill-box">
+        <h4 class="skill-category">AI & Automation</h4>
+        <ul class="skill-list-icon">
+          <li><i class="fas fa-robot"></i> AI-assisted Documentation</li>
+          <li><i class="fas fa-gears"></i> Workflow Automation</li>
+          <li><i class="fas fa-wand-magic-sparkles"></i> AI-powered Content Workflows</li>
+        </ul>
+      </div>
+
+      <!-- Development -->
+      <div class="skill-box">
+        <h4 class="skill-category">Development</h4>
+        <ul class="skill-list-icon">
+          <li><i class="fab fa-python"></i> Python & Flask</li>
+          <li><i class="fab fa-java"></i> Java</li>
+          <li><i class="fas fa-database"></i> MySQL & PostgreSQL</li>
+          <li><i class="fab fa-aws"></i> AWS</li>
+          <li><i class="fab fa-linux"></i> Linux</li>
+        </ul>
+      </div>
+
+      <!-- Testing & Tools -->
+      <div class="skill-box">
+        <h4 class="skill-category">Testing & Tools</h4>
+        <ul class="skill-list-icon">
+          <li><i class="fas fa-vial"></i> Web & UI Testing</li>
+          <li><i class="fas fa-bug"></i> Browser Debugging</li>
+          <li><i class="fas fa-code-branch"></i> Code Review</li>
+          <li><i class="fas fa-paper-plane"></i> Postman</li>
+          <li><i class="fas fa-shield-halved"></i> OWASP ZAP</li>
+          <li><i class="fab fa-jira"></i> Jira</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Education & Certifications -->
+<section id="education" class="fade-in-section">
+  <div class="container">
+    <h2 class="section-title">Education & Certifications</h2>
+    <p class="project-text">
+      Academic foundation, continuous learning, and the experiences that shaped my technical journey.
+    </p>
+
+    <div class="education-container">
+
+      <!-- Education -->
+      <div class="education-card">
+        <div class="education-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+
+        <h3>B.E. Computer Science & Engineering</h3>
+
+        <p class="education-college">
+          CARE College of Engineering, Anna University
+        </p>
+
+        <p class="education-date">2019 – 2023</p>
+
+        <div class="education-highlight">
+          <strong>CGPA: 9.32 / 10</strong>
+          <span>18th Rank — Anna University (State Level)</span>
+        </div>
+
+        <div class="college-about">
+          <h4>About My College</h4>
+          <p>
+            My undergraduate journey at CARE College of Engineering gave me
+            a strong foundation in Computer Science while helping me develop
+            my technical, communication, and leadership skills. Beyond
+            academics, I actively participated in student leadership,
+            literary activities, technical initiatives, and campus events.
+          </p>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="education-card">
+        <div class="education-icon">
+          <i class="fas fa-certificate"></i>
+        </div>
+
+        <h3>Certifications</h3>
+
+        <ul class="certification-list">
+          <li>
+            <i class="fas fa-check-circle"></i>
+            AWS Certified Cloud Practitioner
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Data Productivity Cloud Foundations — Matillion
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            SQL Bootcamp — Udemy
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            HTML, CSS & JavaScript for Web Developers — Johns Hopkins
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            CSS Skill Assessment — HackerRank
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Java Programming — Great Learning
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Data Science Methodology — IBM Coursera
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Data Analysis using MS Excel — Coursera Project Network
+          </li>
+
+          <li>
+            <i class="fas fa-check-circle"></i>
+            Build a Free Website with WordPress — Coursera Project Network
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Professional Work -->
+  <section id="work" class="fade-in-section">
+    <div class="container">
+      <h2 class="section-title">Work in Action</h2>
+      <p class="project-text">
+        A look at the kinds of documentation, web, analytics, and workflow problems I enjoy solving.
+      </p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card shadow-sm work-card">
+            <div class="work-icon"><i class="fas fa-file-code"></i></div>
+            <div class="project-content p-3">
+              <h3 class="project-title">Documentation Engineering</h3>
+              <p class="project-description">
+                Build and improve documentation-site experiences using Markdown, HTML, CSS,
+                JavaScript, Git, and modern documentation tooling.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card shadow-sm work-card">
+            <div class="work-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="project-content p-3">
+              <h3 class="project-title">Documentation Analytics</h3>
+              <p class="project-description">
+                Use page traffic, engagement, feedback, and event data to understand how
+                documentation is used and identify opportunities for improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card shadow-sm work-card">
+            <div class="work-icon"><i class="fas fa-robot"></i></div>
+            <div class="project-content p-3">
+              <h3 class="project-title">AI & Workflow Automation</h3>
+              <p class="project-description">
+                Explore practical AI and automation workflows that reduce repetitive documentation
+                work and help teams identify, triage, and improve content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="work-note">
+        <i class="fas fa-lock project-icon"></i>
+        Selected examples describe the nature of my work without exposing proprietary product details.
+      </p>
+    </div>
+  </section>
+
+  <!-- Selected Projects -->
+  <section id="projects" class="fade-in-section">
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="project-text">A few personal and academic projects that show my technical foundation and curiosity.</p>
+
+      <div class="row g-4 justify-content-center">
         <div class="col-md-6 col-lg-4">
           <div class="project-card shadow-sm">
             <img src="assets/task.jpg" alt="Anime Task Planner" class="project-img rounded" />
             <div class="project-content p-3">
               <h3 class="project-title"><i class="fas fa-tasks project-icon"></i> Anime Task Planner</h3>
               <p class="project-description">
-                A vibrant, anime-inspired to-do planner built with HTML, CSS, and JavaScript to help users organize daily tasks with a dash of kawaii flair.              <div class="project-links d-flex gap-2">
-                <a href="https://github.com/stacy4602/Task-Planner" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
-                <a href="https://stacy4602.github.io/Task-Planner/" class="btn btn-outline-success btn-sm" target="_blank"><i class="fas fa-globe me-1"></i> Live</a>
+                A vibrant anime-inspired to-do planner built with HTML, CSS, and JavaScript
+                to organize daily tasks with a little personality.
+              </p>
+              <div class="project-links d-flex gap-2">
+                <a href="https://github.com/stacy4602/Task-Planner" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github me-1"></i> GitHub
+                </a>
+                <a href="https://stacy4602.github.io/Task-Planner/" class="btn btn-outline-success btn-sm" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-globe me-1"></i> Live
+                </a>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card shadow-sm">
+            <img src="assets/farm.jpg" alt="Farming Assistance System" class="project-img rounded" />
+            <div class="project-content p-3">
+              <h3 class="project-title"><i class="fas fa-seedling project-icon"></i> Farming Assistance System</h3>
+              <p class="project-description">
+                A smart web application using XGBoost and ResNet models to recommend crops,
+                fertilizers, and diagnose plant diseases using Python, Flask, and machine learning.
+              </p>
+              <div class="project-links d-flex gap-2">
+                <a href="https://github.com/stacy4602/Farming_Assistant" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github me-1"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col-md-6 col-lg-4">
           <div class="project-card shadow-sm">
             <img src="assets/university.jpg" alt="University Admission Eligibility Predictor" class="project-img rounded" />
             <div class="project-content p-3">
-              <h3 class="project-title"><i class="fas fa-school project-icon"></i> University Admission Eligibility Predictor</h3>
+              <h3 class="project-title"><i class="fas fa-school project-icon"></i> University Admission Predictor</h3>
               <p class="project-description">
-                A prediction tool using Machine Learning (Logistic Regression) and Python to estimate a student's chances of university admission based on academic inputs              </p>
-              <div class="project-links d-flex gap-2">
-                <a href="https://github.com/stacy4602/Uni-Predictor-University_Admit_Eligibilty_Predictor" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
-                <a href="https://uni-predictor-university-admit.onrender.com" class="btn btn-outline-success btn-sm" target="_blank"><i class="fas fa-globe me-1"></i> Live</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card shadow-sm">
-            <img src="assets/pokemon.jpg" alt="Pokémon Legendary Prediction" class="project-img rounded" />
-            <div class="project-content p-3">
-              <h3 class="project-title"><i class="fas fa-dragon project-icon"></i> Pokémon Legendary Prediction</h3>
-              <p class="project-description">
-                A machine learning model built with Python and scikit-learn to predict whether a Pokémon is legendary based on its stats and attributes.              </p>
-              <div class="project-links d-flex gap-2">
-                <a href="https://github.com/stacy4602/Pokemon-Legendary-Prediction" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card shadow-sm">
-            <img src="assets/weather.jpg" alt="Weather App" class="project-img rounded" />
-            <div class="project-content p-3">
-              <h3 class="project-title"><i class="fas fa-cloud-sun project-icon"></i> Weather App</h3>
-              <p class="project-description">
-                A sleek weather forecasting app built with React.js that displays real-time weather data using a public API.              </p>
-              <div class="project-links d-flex gap-2">
-                <a href="https://github.com/stacy4602" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fab fa-github me-1"></i> GitHub</a>
-                <a href="https://weather-app.example.com" class="btn btn-outline-success btn-sm" target="_blank"><i class="fas fa-globe me-1"></i> Live</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project-card shadow-sm">
-            <img src="assets/book recom.jpg" alt="Book Recommendation System" class="project-img rounded" />
-            <div class="project-content p-3">
-              <h3 class="project-title"><i class="fa-solid fa-book project-icon"></i> Book Recommendation</h3>
-              <p class="project-description">
-                A hybrid recommendation engine combining content-based and collaborative filtering using Python to suggest personalized books for users.
+                A Python and machine-learning prediction tool using logistic regression to estimate
+                university admission eligibility from academic inputs.
               </p>
               <div class="project-links d-flex gap-2">
-                <a href="" class="btn btn-outline-primary btn-sm"><i class="fab fa-github me-1"></i> GitHub</a>
+                <a href="https://github.com/stacy4602/Uni-Predictor-University_Admit_Eligibilty_Predictor"
+                   class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github me-1"></i> GitHub
+                </a>
+                <a href="https://uni-predictor-university-admit.onrender.com"
+                   class="btn btn-outline-success btn-sm" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-globe me-1"></i> Live
+                </a>
               </div>
             </div>
           </div>
@@ -248,67 +483,80 @@
     </div>
   </section>
 
-  <!-- Achievements Section -->
-  <section id="achievements" class="fade-in-section">
+    <!-- Leadership -->
+  <section id="leadership" class="fade-in-section">
     <div class="container">
-      <h2 class="section-title">Milestones</h2>
-      <p class="project-text">A brief look at awards, rankings, and contributions that have made a lasting impact</p>
+      <h2 class="section-title">Leadership & Achievements</h2>
+      <p class="project-text">Academic excellence, leadership, and communication milestones.</p>
       <div class="d-flex flex-wrap justify-content-center gap-3">
         <span class="achievement-badge"><i class="fas fa-trophy me-2"></i>Anna University 18th Rank Holder</span>
-        <span class="achievement-badge"><i class="fas fa-award me-2"></i>Best Female Student</span>
+        <span class="achievement-badge"><i class="fas fa-award me-2"></i>CGPA 9.32/10</span>
         <span class="achievement-badge"><i class="fas fa-award me-2"></i>Best Outgoing Student Nominee</span>
-        <span class="achievement-badge"><i class="fas fa-medal me-2"></i>School President</span>
-        <span class="achievement-badge"><i class="fas fa-medal me-2"></i>Vice President - English Club</span>
-        <span class="achievement-badge"><i class="fas fa-medal me-2"></i>Vice president - GESA Club</span>
-        <span class="achievement-badge"><i class="fa-solid fa-microphone me-2"></i>Master of Ceremony</span>
-        <span class="achievement-badge"><i class="fas fa-certificate me-2"></i>NSS Volunteer</span>
+        <span class="achievement-badge"><i class="fas fa-medal me-2"></i>School Pupil Leader</span>
+        <span class="achievement-badge"><i class="fas fa-medal me-2"></i>English Literary Club VP</span>
+        <span class="achievement-badge"><i class="fas fa-medal me-2"></i>GESA VP</span>
+        <span class="achievement-badge"><i class="fas fa-microphone me-2"></i>Master of Ceremony</span>
+        <span class="achievement-badge"><i class="fas fa-hands-helping me-2"></i>NSS Volunteer</span>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="fade-in-section" style="padding: 2rem; max-width: 100%;  ">
+  <!-- Contact -->
+  <section id="contact" class="fade-in-section">
     <div class="container">
       <div class="contact-photo" aria-label="Contact photo">
-        <img src="assets/connect.png" alt="Contact Photo" />
+        <img src="assets/connect.png" alt="Contact illustration" />
       </div>
+
       <div class="contact-form-container">
-      <h2 class="section-title">Let’s Connect</h2>
-     <div style="text-align: center;">
-      <p class="about-text">Drop a message or give me a call.</p>
-      <span class="project-text"><i class="fa-solid fa-phone project-icon"></i></i>&nbsp;&nbsp;+916379690130</span>
-      <span class="project-text"><a href="mailto:jastephanierose@gmail.com" target="_blank" style="display: block; color: inherit; text-decoration: none;"><i class="fa-solid fa-envelope project-icon"></i>&nbsp;&nbsp;jastephanierose@gmail.com</a></span><br>
-     </div> 
-      <br>
-      <form id="contactForm" class="mx-auto" style="max-width:600px;" novalidate>
-        <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name" required />
-        <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Your Email" required />
-        <textarea class="form-control mb-3" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-      </form>
-      <div id="formAlert" class="mt-3 text-center"></div>
+        <h2 class="section-title">Let’s Connect</h2>
+
+        <div style="text-align: center;">
+          <p class="about-text">Interested in documentation, docs engineering, or technical communication? Drop me a message.</p>
+          <span class="project-text">
+            <i class="fa-solid fa-envelope project-icon"></i>&nbsp;&nbsp;
+            <a href="mailto:jastephanierose@gmail.com" target="_blank" rel="noopener noreferrer"
+               style="color: inherit; text-decoration: none;">jastephanierose@gmail.com</a>
+          </span>
+        </div>
+
+        <br>
+
+        <form id="contactForm" class="mx-auto" style="max-width:600px;" novalidate>
+          <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name" required />
+          <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Your Email" required />
+          <textarea class="form-control mb-3" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+
+        <div id="formAlert" class="mt-3 text-center"></div>
+      </div>
     </div>
-  </div> 
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-light py-3 bg-dark"> 
-    <div class="footer-left"><a class="navbar-brand" href="#hero">Steffy Roesy</a></div> 
-<div class="footer-center">
-<a href="https://github.com/stacy4602" target="_blank"><i class="fa-brands fa-github footer-icon1"></i></a>
-<a href="https://www.linkedin.com/in/steffyroesyja/" target="_blank"><i class="fa-brands fa-linkedin footer-icon2"></i></a>
-<a href="mailto:jastephanierose@gmail.com" target="_blank"><i class="fa-solid fa-envelope footer-icon2"></i></a>
-<a href="tel:6379690130" target="_blank"><i class="fa-solid fa-phone footer-icon2"></i></a>
-</div>
-<div class="footer-right" style="text-align: center;"> © 2025 Steffy Roesy. All rights reserved.</div>
+  <footer class="text-center py-3">
+    <div class="footer-left">
+      <a class="navbar-brand" href="#hero">Steffy Roesy</a>
+    </div>
 
-</footer>
+    <div class="footer-center">
+      <a href="https://github.com/stacy4602" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fa-brands fa-github footer-icon1"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/steffyroesyja/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin footer-icon2"></i>
+      </a>
+      <a href="mailto:jastephanierose@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+        <i class="fa-solid fa-envelope footer-icon2"></i>
+      </a>
+    </div>
 
-  <!-- Bootstrap JS bundle -->
+    <div class="footer-right">© 2026 Steffy Roesy. All rights reserved.</div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
